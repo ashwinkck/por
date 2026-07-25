@@ -90,9 +90,9 @@ const WhatIDo = () => {
               <h3>DEVELOP</h3>
               <h4>Description</h4>
               <p>
-                I specialize in building full-stack applications and intelligent
-                systems that integrate modern web technologies with machine
-                learning. From scalable APIs to AI-powered solutions.
+                Computer Science undergraduate specializing in Artificial Intelligence, Machine Learning, and full-stack development. Experienced
+in RAG systems, multi-agent applications, optimization engines, and computer vision solutions using Python, React, TensorFlow,
+PyTorch, LangChain, and SQL.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
