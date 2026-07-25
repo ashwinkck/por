@@ -15,13 +15,13 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>B.TECH (CSE)</h4>
-                <h5>K.R. MANGALAM UNIVERSITY</h5>
+                <h4>B.E (CSE)</h4>
+                <h5>YENEPOYA INSTITUTE OF TECHNOLOGY</h5>
               </div>
-              <h3>2022 - 2026</h3>
+              <h3>2025 - 2026</h3>
             </div>
             <p>
-              Bachelor of Technology in Computer Science and Engineering with a CGPA of 8.67 / 10.0.
+              Bachelor of Engineering in Computer Science and Engineering.
               Focused on core computer science subjects, systems, competitive programming, and full-stack development.
             </p>
           </div>
@@ -29,7 +29,7 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>SOFTWARE DEVELOPER INTERN</h4>
-                <h5>XEBIA</h5>
+                <h5>THEAX</h5>
               </div>
               <h3>2025</h3>
             </div>
@@ -41,14 +41,13 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>SOFTWARE DEVELOPER INTERN</h4>
-                <h5>GOQUANT INC.</h5>
+                <h4>AI SUBJECT MATTER EXPERT</h4>
+                <h5>THEAX</h5>
               </div>
-              <h3>2025 - 2026</h3>
+              <h3>2026 - </h3>
             </div>
             <p>
-              Contributing to backend systems for institutional DeFi & digital assets trading infrastructure, building real-time market data pipelines,
-              smart order routing, smart order execution, and lifecycle management tooling (settlement, clearing, PMS/RMS integration).
+              Trained and mentored 300+ students in Agentic AI, RAG, LangChain, CrewAI, PyTorch, and Generative AI. Designed backend APIs and relational database schemas using Python and Node.js. Built full-stack AI applications with React and Python, focusing on reliable data pipelines and maintainable architectures. Delivered deployment-ready products, including a confidential solution being prepared for presentation at the IBM Innovation Centre of Education.
             </p>
           </div>
         </div>
