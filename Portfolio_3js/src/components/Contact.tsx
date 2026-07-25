@@ -33,7 +33,7 @@ const Contact = () => {
               Github <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/in/ashwinkrishnanck"
+              href="https://www.linkedin.com/in/ashkck/"
               target="_blank"
               rel="noopener noreferrer"
               data-cursor="disable"
@@ -42,7 +42,7 @@ const Contact = () => {
               Linkedin <MdArrowOutward />
             </a>
             <a
-              href="https://x.com/SatwikM77"
+              href="https://x.com/Ashwinkck"
               target="_blank"
               rel="noopener noreferrer"
               data-cursor="disable"
@@ -51,7 +51,7 @@ const Contact = () => {
               Twitter <MdArrowOutward />
             </a>
             <a
-              href="https://www.instagram.com/satwikmishra.77"
+              href="https://www.instagram.com/ashwin_kck_"
               target="_blank"
               rel="noopener noreferrer"
               data-cursor="disable"
@@ -62,10 +62,10 @@ const Contact = () => {
           </div>
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Satwik Mishra</span>
+              By <br /> <span>AshwinKrishnan CK</span>
             </h2>
             <h5>
-              <MdCopyright /> 2025
+              <MdCopyright /> 2026
             </h5>
           </div>
         </div>
