@@ -91,16 +91,14 @@ const WhatIDo = () => {
               <h4>Description</h4>
               <p>
                 Computer Science undergraduate specializing in Artificial Intelligence, Machine Learning, and full-stack development. Experienced
-in RAG systems, multi-agent applications, optimization engines, and computer vision solutions using Python, React, TensorFlow,
-PyTorch, LangChain, and SQL.
+                in RAG systems, multi-agent applications, optimization engines, and computer vision solutions using Python, React,
+                PyTorch, LangChain, and SQL.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Python</div>
                 <div className="what-tags">JavaScript</div>
                 <div className="what-tags">C++</div>
-                <div className="what-tags">Go</div>
-                <div className="what-tags">Rust</div>
                 <div className="what-tags">SQL</div>
                 <div className="what-tags">React</div>
                 <div className="what-tags">Next.js 14</div>
