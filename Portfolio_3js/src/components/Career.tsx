@@ -18,7 +18,7 @@ const Career = () => {
                 <h4>B.E (CSE)</h4>
                 <h5>YENEPOYA INSTITUTE OF TECHNOLOGY</h5>
               </div>
-              <h3>2025 - 2026</h3>
+              <h3>2022 - 2026</h3>
             </div>
             <p>
               Bachelor of Engineering in Computer Science and Engineering.
