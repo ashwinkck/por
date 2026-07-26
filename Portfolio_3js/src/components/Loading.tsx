@@ -98,7 +98,7 @@ const Loading = ({ percent }: { percent: number }) => {
         </div>
         {readyToStart && (
           <div className={`click-start-msg ${clicked && "fade-out"}`}>
-            CLICK ANYWHERE TO START
+            CLICK HERE TO START
           </div>
         )}
       </div>

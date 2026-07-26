@@ -46,7 +46,7 @@ const MusicPlayer = () => {
   return (
     <div className="music-player" onClick={togglePlay} data-cursor="disable">
       <audio ref={audioRef} loop src="/bgm.mp3" />
-      <HoverLinks text={isPlaying ? "SOUND ON" : "SOUND OFF"} cursor={false} />
+      <HoverLinks text={isPlaying ? "ON" : "OFF"} cursor={false} />
       <span className="music-icon">
         {isPlaying ? <TbMusic /> : <TbMusicOff />}
       </span>
