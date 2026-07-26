@@ -362,3 +362,18 @@
     font-size: 18px;
   }
 }
+
+.click-start-msg {
+  position: absolute;
+  bottom: 25%;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  animation: blink 2s infinite;
+  z-index: 9;
+}
+.click-start-msg.fade-out {
+  opacity: 0;
+  transition: 0.5s;
+}

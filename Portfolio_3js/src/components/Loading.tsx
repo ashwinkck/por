@@ -10,14 +10,25 @@ const Loading = ({ percent }: { percent: number }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [clicked, setClicked] = useState(false);
 
-  if (percent >= 100) {
-    setTimeout(() => {
-      setLoaded(true);
-      setTimeout(() => {
-        setIsLoaded(true);
-      }, 1000);
-    }, 600);
-  }
+  const [readyToStart, setReadyToStart] = useState(false);
+
+  useEffect(() => {
+    if (percent >= 100 && !loaded) {
+      const timer = setTimeout(() => {
+        setLoaded(true);
+        setTimeout(() => {
+          setReadyToStart(true);
+        }, 1000);
+      }, 600);
+      return () => clearTimeout(timer);
+    }
+  }, [percent, loaded]);
+
+  const handleStart = () => {
+    if (readyToStart && !isLoaded) {
+      setIsLoaded(true);
+    }
+  };
 
   useEffect(() => {
     import("./utils/initialFX").then((module) => {
@@ -59,7 +70,7 @@ const Loading = ({ percent }: { percent: number }) => {
           </div>
         </div>
       </div>
-      <div className="loading-screen">
+      <div className="loading-screen" onClick={handleStart} style={{ cursor: readyToStart ? "pointer" : "default" }}>
         <div className="loading-marquee">
           <Marquee>
             <span> AI Engineer</span> <span>A Developer</span>
@@ -85,6 +96,11 @@ const Loading = ({ percent }: { percent: number }) => {
             </div>
           </div>
         </div>
+        {readyToStart && (
+          <div className={`click-start-msg ${clicked && "fade-out"}`}>
+            CLICK ANYWHERE TO START
+          </div>
+        )}
       </div>
     </>
   );

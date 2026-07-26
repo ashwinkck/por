@@ -11,7 +11,7 @@ const Cursor = ({
   initialColors = ["#6d0a0a", "#6d0a0a", "#6d0a0a"],
   lightColors = ["#fafafaff", "#6d0a0a", "#6d0a0a", "#6d0a0a"],
   lightIntensity = 250,
-  enableRandomizeOnClick = true,
+  enableRandomizeOnClick = false,
 }: TubesCursorProps = {}) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const appRef = useRef<any>(null);

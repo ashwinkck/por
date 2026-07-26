@@ -8,6 +8,7 @@ import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
+import MusicPlayer from "./MusicPlayer";
 
 const SocialIcons = () => {
   useEffect(() => {
@@ -86,6 +87,7 @@ const SocialIcons = () => {
           <TbNotes />
         </span>
       </a>
+      <MusicPlayer />
     </div>
   );
 };
