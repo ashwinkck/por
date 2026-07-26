@@ -138,9 +138,7 @@ const WhatIDo = () => {
               <h3>DESIGN</h3>
               <h4>Description</h4>
               <p>
-                I design system architectures and user-centric interfaces that
-                combine functionality with accessibility. My approach ensures
-                seamless integration of AI features, scalability.
+                I architect scalable software systems and user-focused interfaces that balance performance with accessibility. My approach delivers seamless AI integration, clean design patterns, and maintainable solutions.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
