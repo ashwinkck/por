@@ -90,9 +90,7 @@ const WhatIDo = () => {
               <h3>DEVELOP</h3>
               <h4>Description</h4>
               <p>
-                Computer Science undergraduate specializing in Artificial Intelligence, Machine Learning, and full-stack development. Experienced
-                in RAG systems, multi-agent applications, optimization engines, and computer vision solutions using Python, React,
-                PyTorch, LangChain, and SQL.
+                I am Experienced in RAG systems, multi-agent applications, optimization engines, and computer vision solutions using Python, React, PyTorch, LangChain, and SQL.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
@@ -154,6 +152,44 @@ const WhatIDo = () => {
                 <div className="what-tags">Git & GitHub</div>
                 <div className="what-tags">Linux</div>
                 <div className="what-tags">LangGraph</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 2)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>MENTORING</h3>
+              <h4>Description</h4>
+              <p>
+                I have trained and mentored 300+ students in Agentic AI, RAG, LangChain, CrewAI, PyTorch, and Generative AI, translating complex concepts into practical, production-ready development skills.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Mentorship</div>
+                <div className="what-tags">Technical Training</div>
+                <div className="what-tags">Agentic AI</div>
+                <div className="what-tags">Generative AI</div>
+                <div className="what-tags">CrewAI</div>
+                <div className="what-tags">LangChain</div>
+                <div className="what-tags">RAG</div>
+                <div className="what-tags">PyTorch</div>
               </div>
               <div className="what-arrow"></div>
             </div>
