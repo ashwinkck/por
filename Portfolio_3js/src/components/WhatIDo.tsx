@@ -101,17 +101,17 @@ const WhatIDo = () => {
                 <div className="what-tags">C++</div>
                 <div className="what-tags">SQL</div>
                 <div className="what-tags">React</div>
-                <div className="what-tags">Next.js 14</div>
+                <div className="what-tags">Next.js</div>
                 <div className="what-tags">React Native</div>
                 <div className="what-tags">Flask</div>
                 <div className="what-tags">FastAPI</div>
                 <div className="what-tags">Node.js</div>
-                <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">Pytorch</div>
                 <div className="what-tags">MongoDB</div>
-                <div className="what-tags">Redis</div>
-                <div className="what-tags">Firebase</div>
-                <div className="what-tags">Docker</div>
-                <div className="what-tags">RabbitMQ/Kafka</div>
+                <div className="what-tags">ChromDB</div>
+                <div className="what-tags">VectorDB</div>
+                <div className="what-tags">LangChain</div>
+                <div className="what-tags">FAISSDB</div>
               </div>
               <div className="what-arrow"></div>
             </div>
