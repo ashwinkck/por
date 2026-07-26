@@ -19,8 +19,8 @@
   position: fixed;
   width: 300px;
   height: 300px;
-  background-color: #ee1a0b;
-  box-shadow: inset -50px 40px 50px rgba(84, 0, 255, 0.6);
+  background-color: oklab(60.275999999999996% 0.20664 0.11803);
+  box-shadow: inset -50px 40px 50px #6d0a0a;
   filter: blur(60px);
   border-radius: 50%;
   animation: loadingCircle 5s linear infinite;
@@ -58,8 +58,8 @@
   display: none;
   width: 300px;
   height: 300px;
-  background-color: #fb8dff;
-  box-shadow: inset -50px 40px 50px rgba(84, 0, 255, 0.6);
+  background-color: #6d0a0a;
+  box-shadow: inset -50px 40px 50px #6d0a0a;
   filter: blur(50px);
   border-radius: 50%;
   animation: loadingCircle2 5s linear infinite;
@@ -87,9 +87,9 @@
   width: 400px;
   height: 400px;
   z-index: 1;
-  background-color: #f59bf8;
+  background-color: #6d0a0a;
   transform: translate(-50%, 36%) scaleX(1.4);
-  box-shadow: inset 66px 35px 85px 0px rgba(85, 0, 255, 0.65);
+  box-shadow: inset 66px 35px 85px 0px #6d0a0a;
   filter: blur(50px);
   border-radius: 50%;
   top: 50%;
@@ -211,13 +211,14 @@
   flex-wrap: nowrap;
   text-transform: uppercase;
   letter-spacing: 2px;
+  overflow: hidden;
 }
 .landing-h2-info-1 {
   position: absolute;
   top: 0;
 }
 h2.landing-info-h2 {
-  color: #c481ff;
+  color: #6d0a0a;
   font-size: 42px;
   width: 120%;
   margin: 0;

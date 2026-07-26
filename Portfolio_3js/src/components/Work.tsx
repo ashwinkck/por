@@ -43,11 +43,11 @@ const projects = [
     image: "/images/rlsnake.png",
   },
   {
-    title: "Apache DataFusion",
-    category: "Open Source Contributions",
-    tools: "Rust, Apache Arrow (3+ PRs merged into core engine)",
-    link: "https://github.com/apache/datafusion",
-    image: "/images/placeholder.webp",
+    title: "SIGN LANGAUAGE DETECTION",
+    category: "AI-powered sign language detection system",
+    tools: "TensorFlow, react, mediapipe",
+    link: "https://github.com/ashwinkck/Sign-language-Detection",
+    image: "/images/signlang.png",
   },
 ];
 
