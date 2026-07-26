@@ -1,62 +1,86 @@
 import { useEffect, useRef } from "react";
-import "./styles/Cursor.css";
 
-const Cursor = () => {
-  const cursorRef = useRef<HTMLDivElement>(null);
+type TubesCursorProps = {
+  initialColors?: string[];   // tubes base colors
+  lightColors?: string[];     // lights colors
+  lightIntensity?: number;    // lights intensity
+  enableRandomizeOnClick?: boolean;
+};
+
+const Cursor = ({
+  initialColors = ["#6d0a0a", "#6d0a0a", "#6d0a0a"],
+  lightColors = ["#fafafaff", "#6d0a0a", "#6d0a0a", "#6d0a0a"],
+  lightIntensity = 250,
+  enableRandomizeOnClick = true,
+}: TubesCursorProps = {}) => {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const appRef = useRef<any>(null);
+
   useEffect(() => {
-    let hover = false;
-    const cursor = cursorRef.current!;
-    const mousePos = { x: 0, y: 0 };
-    const cursorPos = { x: 0, y: 0 };
-    let animationFrame: number;
+    let removeClick: (() => void) | null = null;
+    let destroyed = false;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      mousePos.x = e.clientX;
-      mousePos.y = e.clientY;
-    };
+    (async () => {
+      const mod = await import(
+        /* webpackIgnore: true */
+        "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js"
+      );
+      const TubesCursorCtor = (mod as any).default ?? mod;
 
-    const loop = () => {
-      if (!hover) {
-        const delay = 6;
-        cursorPos.x += (mousePos.x - cursorPos.x) / delay;
-        cursorPos.y += (mousePos.y - cursorPos.y) / delay;
-        cursor.style.transform = `translate(${cursorPos.x}px, ${cursorPos.y}px)`;
+      if (!canvasRef.current || destroyed) return;
+
+      const app = TubesCursorCtor(canvasRef.current, {
+        tubes: {
+          colors: initialColors,
+          lights: {
+            intensity: lightIntensity,
+            colors: lightColors,
+          },
+        },
+      });
+
+      appRef.current = app;
+
+      if (enableRandomizeOnClick) {
+        const handler = () => {
+          const colors = randomColors(initialColors.length);
+          const lights = randomColors(lightColors.length);
+          app.tubes.setColors(colors);
+          app.tubes.setLightsColors(lights);
+        };
+        document.body.addEventListener("click", handler);
+        removeClick = () =>
+          document.body.removeEventListener("click", handler);
       }
-      animationFrame = requestAnimationFrame(loop);
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-    animationFrame = requestAnimationFrame(loop);
-
-    document.querySelectorAll("[data-cursor]").forEach((item) => {
-      const element = item as HTMLElement;
-      element.addEventListener("mouseover", (e: MouseEvent) => {
-        const target = e.currentTarget as HTMLElement;
-        const rect = target.getBoundingClientRect();
-
-        if (element.dataset.cursor === "icons") {
-          cursor.classList.add("cursor-icons");
-          cursor.style.transform = `translate(${rect.left}px,${rect.top}px)`;
-          cursor.style.setProperty("--cursorH", `${rect.height}px`);
-          hover = true;
-        }
-        if (element.dataset.cursor === "disable") {
-          cursor.classList.add("cursor-disable");
-        }
-      });
-      element.addEventListener("mouseout", () => {
-        cursor.classList.remove("cursor-disable", "cursor-icons");
-        hover = false;
-      });
-    });
+    })();
 
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      cancelAnimationFrame(animationFrame);
+      destroyed = true;
+      if (removeClick) removeClick();
+      try {
+        appRef.current?.dispose?.();
+        appRef.current = null;
+      } catch {
+        // ignore
+      }
     };
-  }, []);
+  }, [initialColors, lightColors, lightIntensity, enableRandomizeOnClick]);
 
-  return <div className="cursor-main" ref={cursorRef}></div>;
+  return (
+    <div style={{ position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh", zIndex: 9999, pointerEvents: "none", mixBlendMode: "screen" }}>
+      <canvas ref={canvasRef} style={{ width: "100%", height: "100%", display: "block" }} />
+    </div>
+  );
 };
+
+function randomColors(count: number) {
+  return new Array(count).fill(0).map(
+    () =>
+      "#" +
+      Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, "0")
+  );
+}
 
 export default Cursor;
