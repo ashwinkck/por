@@ -1,1 +1,1 @@
-updating the portfolio, on progress
+updating the portfolio, in progress
