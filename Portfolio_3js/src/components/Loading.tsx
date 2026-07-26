@@ -27,6 +27,12 @@ const Loading = ({ percent }: { percent: number }) => {
   const handleStart = () => {
     if (readyToStart && !isLoaded) {
       setIsLoaded(true);
+      // Automatically request fullscreen on user interaction
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen().catch((err) => {
+          console.warn("Fullscreen request failed:", err);
+        });
+      }
     }
   };
 

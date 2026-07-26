@@ -44,7 +44,7 @@ const Career = () => {
                 <h4>AI SUBJECT MATTER EXPERT</h4>
                 <h5>THEAX</h5>
               </div>
-              <h3>2026 - Present</h3>
+              <h3>2026 - </h3>
             </div>
             <p>
               Trained and mentored 300+ students in Agentic AI, RAG, LangChain, CrewAI, PyTorch, and Generative AI. Designed backend APIs and relational database schemas using Python and Node.js. Built full-stack AI applications with React and Python, focusing on reliable data pipelines and maintainable architectures. Delivered deployment-ready products, including a confidential solution being prepared for presentation at the IBM Innovation Centre of Education.
