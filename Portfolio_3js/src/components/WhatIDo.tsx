@@ -152,9 +152,10 @@ const WhatIDo = () => {
                 <div className="what-tags">GCP</div>
                 <div className="what-tags">Docker</div>
                 <div className="what-tags">Vercel</div>
-                <div className="what-tags">Expo EAS</div>
+                <div className="what-tags">LangChain</div>
                 <div className="what-tags">Git & GitHub</div>
                 <div className="what-tags">Linux</div>
+                <div className="what-tags">LangGraph</div>
               </div>
               <div className="what-arrow"></div>
             </div>
